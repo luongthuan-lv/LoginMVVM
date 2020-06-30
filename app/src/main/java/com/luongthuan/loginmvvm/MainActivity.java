@@ -65,9 +65,7 @@ public class MainActivity extends AppCompatActivity implements LoginCallback {
 
     @Override
     public void onFailure(String notification) {
-        String email=edtEmail.getText().toString().trim();
-        String pass=edtPass.getText().toString().trim();
-        Toast.makeText(this,"Login Failed " +pass,Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"Login Failed ",Toast.LENGTH_LONG).show();
     }
 
 
