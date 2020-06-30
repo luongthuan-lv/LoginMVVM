@@ -47,7 +47,7 @@ public class LoginViewModel extends ViewModel {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                loginModel.getEmail();
+
             }
 
             @Override
@@ -66,7 +66,7 @@ public class LoginViewModel extends ViewModel {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                loginModel.getPassword();
+
             }
 
             @Override
