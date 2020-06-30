@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements LoginCallback {
 
     @Override
     public void onFailure(String notification) {
-        Toast.makeText(this,"Login Failed ",Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"Đăng nhập thất bại maakt khẩu không hợ lệ",Toast.LENGTH_LONG).show();
     }
 
 
