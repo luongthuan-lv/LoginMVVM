@@ -7,7 +7,6 @@ import androidx.annotation.Nullable;
 public class LoginModel {
     @Nullable
     String email, password;
-    boolean check;
 
     public LoginModel() {
     }
@@ -37,8 +36,9 @@ public class LoginModel {
 
     public boolean isValid() {
         String gtpass = "^(?=.*[a-z])(?=.*\\d)(?=.*[^A-Za-z\\d])[\\s\\S]{6,}";
-       // String gtemail = "^[\\w-_\\.+]*[\\w-_\\.]\\ @([\\w]+\\.)+[\\w]+[\\w]$";
-        return !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password) && getPassword().matches(gtpass) ;
+        String gtemail = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
+
+        return !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password) && getPassword().matches(gtpass) && getEmail().matches(gtemail) ;
     }
 
 }

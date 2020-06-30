@@ -22,9 +22,9 @@ import com.luongthuan.loginmvvm.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity implements LoginCallback {
 
     EditText edtPass, edtEmail;
-    Button btnResgister;
     Switch swRemember;
     SharedPreferences sharedPreferences;
+    LoginModel loginModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,18 +32,20 @@ public class MainActivity extends AppCompatActivity implements LoginCallback {
       //  setContentView(R.layout.activity_main);
         ActivityMainBinding activityMainBinding= DataBindingUtil.setContentView(this,R.layout.activity_main);
         activityMainBinding.setView(ViewModelProviders.of(this,new LoginViewModelFactory(this)).get(LoginViewModel.class));
+        loginModel=new LoginModel();
         init();
-        sharedPreferences = getSharedPreferences("dataUser", MODE_PRIVATE);
+        sharedPreferences = getSharedPreferences("", MODE_PRIVATE);
         edtEmail.setText(sharedPreferences.getString("email",""));
         edtPass.setText(sharedPreferences.getString("pass",""));
         swRemember.setChecked(sharedPreferences.getBoolean("checked",false));
+        loginModel.setEmail(edtEmail+"");
+        loginModel.setPassword(edtPass+"");
     }
 
     private void init() {
 
         edtPass = findViewById(R.id.edtPass);
         edtEmail = findViewById(R.id.edtEmail);
-        btnResgister = findViewById(R.id.btnResgister);
         swRemember = findViewById(R.id.swRemember);
     }
 
@@ -65,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements LoginCallback {
 
     @Override
     public void onFailure(String notification) {
-        Toast.makeText(this,"Đăng nhập thất bại mật khẩu không hợ lệ",Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"Đăng nhập thất bại mật khẩu hoặc email không hợp lệ",Toast.LENGTH_LONG).show();
     }
 
 
