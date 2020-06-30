@@ -41,7 +41,4 @@ public class LoginModel {
         return !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password) && getPassword().matches(gtpass) ;
     }
 
-    public boolean isCheck(){
-        return true;
-    }
 }
