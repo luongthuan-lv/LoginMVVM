@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">LoginMVVM</string>
+    <string name="resgister">Resgister</string>
+    <string name="login">Login</string>
+    <string name="remember">Remember</string>
+    <string name="email">Email</string>
+    <string name="usename">Username</string>
+    <string name="password">Password</string>
+    <string name="logout">Logout</string>
+</resources>
