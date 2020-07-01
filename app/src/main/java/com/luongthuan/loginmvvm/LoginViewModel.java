@@ -13,7 +13,6 @@ import android.widget.Switch;
 import androidx.lifecycle.ViewModel;
 
 public class LoginViewModel {
-    private LoginModel loginModel;
     private LoginCallback loginCallback;
 
     public LoginViewModel(LoginCallback loginCallback) {
@@ -38,53 +37,4 @@ public class LoginViewModel {
 
         }
     }
-
-
-//    public TextWatcher emailWatcher() {
-//        return new TextWatcher() {
-//            @Override
-//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//
-//            }
-//
-//            @Override
-//            public void onTextChanged(CharSequence s, int start, int before, int count) {
-//
-//            }
-//
-//            @Override
-//            public void afterTextChanged(Editable s) {
-//                loginModel.setEmail(s.toString());
-//            }
-//        };
-//    }
-//
-//    public TextWatcher passWatcher() {
-//        return new TextWatcher() {
-//            @Override
-//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//
-//            }
-//
-//            @Override
-//            public void onTextChanged(CharSequence s, int start, int before, int count) {
-//
-//            }
-//
-//            @Override
-//            public void afterTextChanged(Editable s) {
-//                loginModel.setPassword(s.toString());
-//            }
-//        };
-//    }
-//
-//    public void onClickLoginBtn(View view) {
-//        if (loginModel.isValid()) {
-//            loginCallback.onSuccess("Successfull");
-//        } else {
-//            loginCallback.onFailure("Failed");
-//        }
-//    }
-//
-
 }
