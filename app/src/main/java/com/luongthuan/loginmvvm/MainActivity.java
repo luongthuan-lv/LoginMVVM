@@ -63,6 +63,13 @@ public class MainActivity extends AppCompatActivity implements LoginCallback {
             editor.putBoolean("checked", true);
             editor.commit();
         }
+        if (!swRemember.isChecked()){
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString("email", "");
+            editor.putString("pass", "");
+            editor.putBoolean("checked", false);
+            editor.commit();
+        }
     }
 
     @Override
