@@ -1,7 +1,13 @@
 package com.luongthuan.loginmvvm;
 
 public interface LoginCallback {
-    public void onSuccess(String notification);
-    public void onFailure(String notification);
+    void onSuccess();
+
+    void onFailure();
+
+    void setErorEmail();
+
+    void setErorPassword();
+    void navigateHome();
 
 }
